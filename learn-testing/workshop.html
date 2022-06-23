@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learn Testing</title>
+  </head>
+  <body>
+    <h1>Open the console</h1>
+
+    <script>
+      // the function we're testing
+      function square(x) {
+        return x * x
+      }
+
+      //BEGIN TO AUTOMATE
+
+      // const result = square(2)
+      // const answer = 999
+
+      // if (result === answer) {
+      //   console.info("This is correct")
+      // } else {
+      //   console.error(`Expected square(2) to be 4 but found ${result}`)
+      // }
+
+      //MAKE IT REUSABLE EQUAL
+
+      // function equal(result, answer) {
+      //   if (result === answer) {
+      //     console.info("This is the correct answer, thank you!")
+      //   } else {
+      //     console.error(`Expected ${answer} but received ${result} instead`)
+      //   }
+      // }
+
+      // const resultOne = square(2)
+      // const answerOne = 4
+      // equal(resultOne, answerOne)
+
+      // const resultTwo = square(3.5)
+      // const answerTwo = 555555
+      // equal(resultTwo, answerTwo)
+
+      //MAKE IT REUSABLE NOTEQUAL
+
+      // COME BACK TO THIS ONE!
+
+      function notEqual(result, answer) {
+        if (result === answer) {
+          console.error("not cool, bruh")
+        } else {
+          console.info(
+            `Correct: ${resultOne} squared DOES NOT equal ${answerOne}`
+          )
+        }
+      }
+
+      const resultOne = square(3)
+      const answerOne = 10
+      notEqual(resultOne, answerOne)
+    </script>
+  </body>
+</html>
