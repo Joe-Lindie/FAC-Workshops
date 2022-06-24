@@ -17,49 +17,105 @@
       //BEGIN TO AUTOMATE
 
       // const result = square(2)
-      // const answer = 999
+      // const expected = 999
 
-      // if (result === answer) {
+      // if (result === expected) {
       //   console.info("This is correct")
       // } else {
-      //   console.error(`Expected square(2) to be 4 but found ${result}`)
+      //   console.error(`Expected square(2) to be 4 but found ${expected}`)
       // }
 
       //MAKE IT REUSABLE EQUAL
 
-      // function equal(result, answer) {
-      //   if (result === answer) {
+      // function equal(actual, expected) {
+      //   if (actual === expected) {
       //     console.info("This is the correct answer, thank you!")
       //   } else {
-      //     console.error(`Expected ${answer} but received ${result} instead`)
+      //     console.error(`Expected ${expected} but received ${actual} instead`)
       //   }
       // }
 
-      // const resultOne = square(2)
-      // const answerOne = 4
-      // equal(resultOne, answerOne)
+      // const actualOne = square(2)
+      // const expectedOne = 4
+      // equal(actualOne, expectedOne)
 
-      // const resultTwo = square(3.5)
-      // const answerTwo = 555555
-      // equal(resultTwo, answerTwo)
+      // const actualTwo = square(3.5)
+      // const expectedTwo = 555555
+      // equal(actualTwo, expectedTwo)
 
       //MAKE IT REUSABLE NOTEQUAL
 
-      // COME BACK TO THIS ONE!
+      // function notEqual(actual, expected) {
+      //   if (actual !== expected) {
+      //     console.error(
+      //       `Failed: Expected ${actualOne} but recieved ${expectedOne} `
+      //     )
+      //   } else {
+      //     console.info(` ${expectedOne} is deifferent to  ${actualOne}`)
+      //   }
+      // }
 
-      function notEqual(result, answer) {
-        if (result === answer) {
-          console.error("not cool, bruh")
+      // const actualOne = square(3)
+      // const expectedOne = 10
+      // notEqual(actualOne, expectedOne)
+
+      // function test(name, testfn) {
+      //   console.group(name)
+      //   testfn()
+      //   console.groupEnd()
+      // }
+
+      // function equal(actual, expected) {
+      //   if (actual === expected) {
+      //     console.info("This is the correct answer, thank you!")
+      //   } else {
+      //     console.error(`Expected ${expected} but received ${actual} instead`)
+      //   }
+      // }
+
+      // test("Correctly squares integers", () => {
+      //   const result = square(2)
+      //   const expected = 4
+      //   equal(result, expected)
+      // })
+
+      // test("Correctly squares integers", () => {
+      //   const result = square(3.5)
+      //   const expected = 12.25
+      //   equal(result, expected)
+      // })
+
+      function equal(actual, expected, message) {
+        if (actual === expected) {
+          const defaultMsg = `Expected  ${expected} but recieved ${actual}} `
+          console.info(`Passed ` + message || defaultMsg)
         } else {
-          console.info(
-            `Correct: ${resultOne} squared DOES NOT equal ${answerOne}`
-          )
+          const defaultMsg = `Expected  ${expected} but recieved ${actual}} `
+          console.error(`Failed ` + message || defaultMsg)
         }
       }
 
-      const resultOne = square(3)
-      const answerOne = 10
-      notEqual(resultOne, answerOne)
+      function notEqual(actual, expected, message) {
+        if (actual !== expected) {
+          const defaultMsg = `${expected} is different to ${actual}} `
+          console.info(`${message} || ${defaultMsg}`)
+        } else {
+          const defaultMsg = `${expected} is the same as ${actual}} `
+          console.error(console.error(`${message} || ${defaultMsg}`))
+        }
+      }
+
+      function test(name, testfn) {
+        console.group(name)
+        testfn()
+        console.groupEnd()
+      }
+
+      test("Correctly squares integers", () => {
+        const result = square(2)
+        const expected = 4
+        equal(result, expected, "square(2) should return 4")
+      })
     </script>
   </body>
 </html>
