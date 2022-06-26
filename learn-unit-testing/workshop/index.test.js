@@ -5,14 +5,14 @@
 /////////////////////////////////
 
 // test("makeURL() has correct pokemon name on poke API", () => {
-//   const actual = makeUrl("pikachu")
-//   const expected = "https://pokeapi.co/api/v2/pikachu"
+//   const names = ["eevee", "pikachu", "something"]
 
-//   const actualOne = makeUrl("pikachu")
-//   const expectedOne = "https://pokeapi.co/api/v2/pikachu"
+//   names.map((name) => {
+//     const actual = makeUrl(name)
+//     const expected = `https://pokeapi.co/api/v2/${name}`
 
-//   equal(actual, expected)
-//   equal(actualOne, expectedOne)
+//     equal(actual, expected)
+//   })
 // })
 
 /////////////////////////////////
@@ -24,8 +24,10 @@
 // test("searchParamsToObject() takes form-encoded string and returns object", () => {
 //   const actual = searchParamsToObject("name=joe&email=hello@joelindie.com")
 //   const expected = { name: "joe", email: "hello@joelindie.com" }
+//   //console.log(typeof JSON.stringify(expected))
 
 //   equal(actual.name, expected.name)
+//   equal(actual.email, expected.email)
 // })
 
 /////////////////////////////////
@@ -52,6 +54,6 @@ test("isLeapYear(): Checks for negative years!", () => {
 })
 
 test("isLeapYear(): Checks for user entering strings", () => {
-  equal(isLeapYear("1950"), "Please enter a number")
+  equal(isLeapYear("1"), "Please enter a number")
   equal(isLeapYear("Heyyy"), "Please enter a number")
 })

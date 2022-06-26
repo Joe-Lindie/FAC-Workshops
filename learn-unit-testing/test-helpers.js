@@ -19,7 +19,7 @@ function notEqual(actual, expected, message) {
 }
 
 function test(name, testFunction) {
-  console.group(name)
+  console.groupCollapsed(name)
   testFunction()
   console.groupEnd(name)
 }

@@ -1,8 +1,8 @@
 // "pikachu" -> "https://pokeapi.co/api/v2/pikachu"
 
-function makeUrl(name) {
-  return "https://pokeapi.co/api/v2/" + name
-}
+// function makeUrl(name) {
+//   return "https://pokeapi.co/api/v2/" + name
+// }
 
 /////////////////////////////////
 
@@ -50,4 +50,4 @@ function isLeapYear(year) {
   }
 }
 
-isLeapYear(2020)
+isLeapYear("2010")
