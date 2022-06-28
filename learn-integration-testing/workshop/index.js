@@ -1,18 +1,18 @@
-const add = (a, b) => a + b
-const subtract = (a, b) => a - b
-const multiply = (a, b) => a * b
-const divide = (a, b) => a / b
+const add = (a, b) => parseFloat(a) + parseFloat(b)
+const subtract = (a, b) => parseFloat(a) - parseFloat(b)
+const multiply = (a, b) => parseFloat(a) * parseFloat(b)
+const divide = (a, b) => parseFloat(a) / parseFloat(b)
 
 function calculate(a, sign, b) {
   switch (sign) {
     case "+":
-      return add(parseFloat(a), parseFloat(b))
+      return add(a, b)
     case "-":
-      return subtract(parseFloat(a), parseFloat(b))
+      return subtract(a, b)
     case "*":
-      return multiply(parseFloat(a), parseFloat(b))
+      return multiply(a, b)
     case "/":
-      return divide(parseFloat(a), parseFloat(b))
+      return divide(a, b)
     default:
       return "Please enter a valid sign (+, -, *, /)"
   }

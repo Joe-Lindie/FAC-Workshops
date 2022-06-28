@@ -42,18 +42,18 @@ test("Test for string values passed to calculate() function ", () => {
 ////////////////////////////////////////
 
 test("Tests users input and updates the page", () => {
-  const a = document.querySelector("input[name='a']")
-  const signInput = document.querySelector("select")
-  const b = document.querySelector("input[name='b']")
+  const input_a = document.querySelector("#a")
+  const signInput = document.querySelector("#sign")
+  const input_b = document.querySelector("#b")
+  const submitButton = document.querySelector("button")
+  const result = document.querySelector("#result")
 
-  a.value = "10"
+  input_a.value = "10"
   signInput.value = "*"
-  b.value = "20"
+  input_b.value = "20"
 
-  const submitButton = document.querySelector("button[type='submit']")
   submitButton.click()
 
-  const result = document.querySelector("#result")
   equal(result.textContent, "200")
 
   result.textContent = ""
