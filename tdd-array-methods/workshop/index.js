@@ -40,13 +40,31 @@
 
 /////////////////////////////////
 
-function some(array, callback) {
-  let answer = true
+// function some(array, callback) {
+//   let answer = true
 
+//   for (let i = 0; i < array.length; i++) {
+//     answer = callback(array[i])
+//     if (answer) break
+//   }
+
+//   return answer
+// }
+
+/////////////////////////////////
+
+//////FUNCTION FOUR ///////////
+
+/////////////////////////////////
+
+function find(array, callback) {
   for (let i = 0; i < array.length; i++) {
-    answer = callback(array[i])
-    if (answer) break
+    const answer = callback(array[i])
+
+    if (answer === true) {
+      return array[i]
+    }
   }
 
-  return answer
+  return undefined
 }

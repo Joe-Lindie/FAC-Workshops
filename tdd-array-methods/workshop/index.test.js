@@ -94,34 +94,61 @@
 
 /////////////////////////////////
 
-test("Tests one element in Some() function", () => {
-  const actual = some([2], (num) => num % 2 === 0)
-  const expected = true
+// test("Tests one element in Some() function", () => {
+//   const actual = some([2], (num) => num % 2 === 0)
+//   const expected = true
+
+//   equal(actual, expected)
+// })
+
+// test("Tests Some() function for multiple elements", () => {
+//   const actual = some([2, 4], (num) => num % 2 === 0)
+//   const expected = true
+
+//   equal(actual, expected)
+// })
+
+// test("Tests Some() fucntion with mixed even/odd nums", () => {
+//   const array = [1, 2, 3, 4, 5]
+
+//   const actual = some(array, (num) => num % 2 === 0)
+//   const expected = true
+
+//   equal(actual, expected)
+// })
+
+// test("Test Some() function for failed cases only", () => {
+//   const array = [1, 3, 5, 7, 9]
+
+//   const actual = some(array, (num) => num % 2 === 0)
+//   const expected = false
+
+//   equal(actual, expected)
+// })
+
+/////////////////////////////////
+
+//////TEST FOUR ///////////
+
+/////////////////////////////////
+
+test("Tests Find() function for one element in array", () => {
+  const actual = find([2], (num) => num > 1)
+  const expected = 2
 
   equal(actual, expected)
 })
 
-test("Tests Some() function for multiple elements", () => {
-  const actual = some([2, 4], (num) => num % 2 === 0)
-  const expected = true
+test("Tests Find() function for second element in array", () => {
+  const actual = find([2, 3], (num) => num > 2)
+  const expected = 3
 
   equal(actual, expected)
 })
 
-test("Tests Some() fucntion with mixed even/odd nums", () => {
-  const array = [1, 2, 3, 4, 5]
-
-  const actual = some(array, (num) => num % 2 === 0)
-  const expected = true
-
-  equal(actual, expected)
-})
-
-test("Test Some() function for failed cases only", () => {
-  const array = [1, 3, 5, 7, 9]
-
-  const actual = some(array, (num) => num % 2 === 0)
-  const expected = false
+test("Test Find() Function for undefined values", () => {
+  const actual = find([1, 2, 3], (num) => num > 4)
+  const expected = undefined
 
   equal(actual, expected)
 })
