@@ -132,23 +132,60 @@
 
 /////////////////////////////////
 
-test("Tests Find() function for one element in array", () => {
-  const actual = find([2], (num) => num > 1)
-  const expected = 2
+// test("Tests Find() function for one element in array", () => {
+//   const actual = find([2], (num) => num > 1)
+//   const expected = 2
 
-  equal(actual, expected)
+//   equal(actual, expected)
+// })
+
+// test("Tests Find() function for second element in array", () => {
+//   const actual = find([2, 3], (num) => num > 2)
+//   const expected = 3
+
+//   equal(actual, expected)
+// })
+
+// test("Test Find() Function for undefined values", () => {
+//   const actual = find([1, 2, 3], (num) => num > 4)
+//   const expected = undefined
+
+//   equal(actual, expected)
+// })
+
+/////////////////////////////////
+
+//////TEST FIVE ///////////
+
+/////////////////////////////////
+
+// test reduce()
+test("reduce() when items are numbers - should return a number as result", () => {
+  const result = reduce([1, 2, 3, 4], (sum, item) => sum + item, 0)
+  equal(result, 10)
 })
 
-test("Tests Find() function for second element in array", () => {
-  const actual = find([2, 3], (num) => num > 2)
-  const expected = 3
-
-  equal(actual, expected)
+test("reduce() when initial value is set to something other than 0", () => {
+  const result = reduce([1, 2, 3, 4], (sum, item) => sum + item, 5)
+  equal(result, 15)
 })
 
-test("Test Find() Function for undefined values", () => {
-  const actual = find([1, 2, 3], (num) => num > 4)
-  const expected = undefined
+test("reduce() when items are strings - should return a string as result", () => {
+  const result = reduce(["a", "b", "c", "d"], (sum, item) => sum + item, "")
+  equal(result, "abcd")
+})
 
-  equal(actual, expected)
+test("4 - reduce() when callback function is different operation", () => {
+  const result = reduce([10, 5, 2], (sum, item) => sum - item, 0)
+  equal(result, -17)
+})
+
+test("reduce() when items are negative numbers - should return a negative number as result", () => {
+  const result = reduce([-1, -2, -3, -4], (sum, item) => sum + item, 0)
+  equal(result, -10)
+})
+
+test("reduce() when items are within arrays - should return a string as result", () => {
+  const result = reduce([[1], [23]], (sum, item) => sum + item, [])
+  equal(result, "123")
 })

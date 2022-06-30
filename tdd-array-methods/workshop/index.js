@@ -57,14 +57,30 @@
 
 /////////////////////////////////
 
-function find(array, callback) {
-  for (let i = 0; i < array.length; i++) {
-    const answer = callback(array[i])
+// function find(array, callback) {
+//   for (let i = 0; i < array.length; i++) {
+//     const answer = callback(array[i])
 
-    if (answer === true) {
-      return array[i]
-    }
+//     if (answer === true) {
+//       return array[i]
+//     }
+//   }
+
+//   return undefined
+// }
+
+/////////////////////////////////
+
+//////FUNCTION FIVE ///////////
+
+/////////////////////////////////
+
+function reduce(array, callback, initialValue) {
+  initialValue = initialValue
+
+  for (let i = 0; i < array.length; i++) {
+    initialValue = callback(initialValue, array[i])
   }
 
-  return undefined
+  return initialValue
 }

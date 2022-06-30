@@ -23,7 +23,7 @@ test("Test multiplication parameter of calculate() function ", () => {
 
 test("Test division parameter of calculate() function ", () => {
   equal(calculate(200, "/", 20), 10)
-  equal(calculate(4000, "/", 400), 10)
+  equal(calculate(4000, "/", 350), 11.428571428571429)
 })
 
 test("Test for negative values of calculate() function ", () => {
