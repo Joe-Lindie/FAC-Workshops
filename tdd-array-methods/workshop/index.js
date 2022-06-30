@@ -9,8 +9,17 @@ function filter(array, callback) {
 
   for (let i = 0; i < array.length; i++) {
     const testFn = callback(array[i])
-    filteredArray.push(testFn)
-  }
 
+    if (testFn === true) {
+      filteredArray.push(testFn)
+    }
+  }
+  console.log(filteredArray)
   return filteredArray
 }
+
+/////////////////////////////////
+
+//////FUNCTION TWO ///////////
+
+/////////////////////////////////
