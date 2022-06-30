@@ -79,10 +79,48 @@
 //   equal(actual[0], expected[0])
 // })
 
-test("Tests Every() function for multiple elements", () => {
-  const numbers = [1, 30, 79, 29, 10, 13]
+// test("Tests Every() function for multiple elements", () => {
+//   const numbers = [1, 30, 79, 29, 10, 13]
 
-  const actual = every(numbers, (num) => num < 40)
+//   const actual = every(numbers, (num) => num < 40)
+//   const expected = false
+
+//   equal(actual, expected)
+// })
+
+/////////////////////////////////
+
+//////TEST THREE ///////////
+
+/////////////////////////////////
+
+test("Tests one element in Some() function", () => {
+  const actual = some([2], (num) => num % 2 === 0)
+  const expected = true
+
+  equal(actual, expected)
+})
+
+test("Tests Some() function for multiple elements", () => {
+  const actual = some([2, 4], (num) => num % 2 === 0)
+  const expected = true
+
+  equal(actual, expected)
+})
+
+test("Tests Some() fucntion with mixed even/odd nums", () => {
+  const array = [1, 2, 3, 4, 5]
+
+  const actual = some(array, (num) => num % 2 === 0)
+  const expected = true
+
+  equal(actual, expected)
+})
+
+test("Test Some() function for failed cases only", () => {
+  const array = [1, 3, 5, 7, 9]
+
+  const actual = some(array, (num) => num % 2 === 0)
   const expected = false
 
   equal(actual, expected)

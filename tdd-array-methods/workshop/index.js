@@ -23,12 +23,29 @@
 
 /////////////////////////////////
 
-function every(array, callback) {
+// function every(array, callback) {
+//   let answer = true
+
+//   for (let i = 0; i < array.length; i++) {
+//     answer = callback(array[i])
+//     if (!answer) return false
+//   }
+
+//   return answer
+// }
+
+/////////////////////////////////
+
+//////FUNCTION THREE ///////////
+
+/////////////////////////////////
+
+function some(array, callback) {
   let answer = true
 
   for (let i = 0; i < array.length; i++) {
     answer = callback(array[i])
-    if (!answer) return false
+    if (answer) break
   }
 
   return answer
