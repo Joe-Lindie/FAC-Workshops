@@ -22,13 +22,13 @@
 /////////////////////////////////
 
 test("searchParamsToObject() takes form-encoded string and returns object", () => {
-  const actual = searchParamsToObject("name=joe&email=hello@joelindie.com")
-  const expected = { name: "joe", email: "hello@joelindie.com" }
+  const actual = searchParamsToObject("name=joe&email=hello@joelindie.com");
+  const expected = { name: "joe", email: "hello@joelindie.com" };
   //console.log(typeof JSON.stringify(expected))
 
-  equal(actual.name, expected.name)
-  equal(actual.email, expected.email)
-})
+  equal(actual.name, expected.name);
+  equal(actual.email, expected.email);
+});
 
 /////////////////////////////////
 

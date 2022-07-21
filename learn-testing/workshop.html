@@ -11,7 +11,7 @@
     <script>
       // the function we're testing
       function square(x) {
-        return x * x
+        return x * x;
       }
 
       //BEGIN TO AUTOMATE
@@ -87,35 +87,35 @@
 
       function equal(actual, expected, message) {
         if (actual === expected) {
-          const defaultMsg = `Expected  ${expected} but recieved ${actual}} `
-          console.info(`Passed ` + message || defaultMsg)
+          const defaultMsg = `Expected  ${expected} but recieved ${actual}} `;
+          console.info(`Passed ` + message || defaultMsg);
         } else {
-          const defaultMsg = `Expected  ${expected} but recieved ${actual}} `
-          console.error(`Failed ` + message || defaultMsg)
+          const defaultMsg = `Expected  ${expected} but recieved ${actual}} `;
+          console.error(`Failed ` + message || defaultMsg);
         }
       }
 
       function notEqual(actual, expected, message) {
         if (actual !== expected) {
-          const defaultMsg = `${expected} is different to ${actual}} `
-          console.info(`${message} || ${defaultMsg}`)
+          const defaultMsg = `${expected} is different to ${actual}} `;
+          console.info(`${message} || ${defaultMsg}`);
         } else {
-          const defaultMsg = `${expected} is the same as ${actual}} `
-          console.error(console.error(`${message} || ${defaultMsg}`))
+          const defaultMsg = `${expected} is the same as ${actual}} `;
+          console.error(console.error(`${message} || ${defaultMsg}`));
         }
       }
 
       function test(name, testfn) {
-        console.group(name)
-        testfn()
-        console.groupEnd()
+        console.group(name);
+        testfn();
+        console.groupEnd();
       }
 
       test("Correctly squares integers", () => {
-        const result = square(2)
-        const expected = 4
-        equal(result, expected, "square(2) should return 4")
-      })
+        const result = square(2);
+        const expected = 4;
+        equal(result, expected, "square(2) should return 4");
+      });
     </script>
   </body>
 </html>

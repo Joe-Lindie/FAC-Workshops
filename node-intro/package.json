@@ -1,0 +1,5 @@
+{
+  "scripts": {
+    "greet": "cowsay hello"
+  }
+}

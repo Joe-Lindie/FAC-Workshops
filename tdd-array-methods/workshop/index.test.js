@@ -11,13 +11,13 @@
 
 // test("Tests if the first element in array passes the test", () => {
 //   const actual = filter(["apple"], (word) => word.length > 2)
-//   const expected = [true]
+//   const expected = ["apple"]
 //   equal(actual[0], expected[0])
 // })
 
 // test("Tests if two element in array passes the test", () => {
 //   const actual = filter(["apple", "elephant"], (word) => word.length > 4)
-//   const expected = [true, true]
+//   const expected = ["apple", "elephant"]
 
 //   equal(actual[0], expected[0])
 //   equal(actual[1], expected[1])
@@ -25,7 +25,7 @@
 
 // test("Tests all elements, and only receives the tests that pass", () => {
 //   const actual = filter(["apple", "elephant"], (word) => word.length > 5)
-//   const expected = [true]
+//   const expected = ["elephant"]
 
 //   equal(actual.length, expected.length)
 // })
@@ -40,7 +40,7 @@
 //     "present",
 //   ]
 //   const actual = filter(wordsArray, (word) => word.length > 5)
-//   const expected = [true, true, true]
+//   const expected = ["exuberant", "destruction", "present"]
 
 //   equal(actual.length, expected.length)
 //   equal(actual[0], expected[0])
@@ -160,32 +160,32 @@
 /////////////////////////////////
 
 // test reduce()
-test("reduce() when items are numbers - should return a number as result", () => {
-  const result = reduce([1, 2, 3, 4], (sum, item) => sum + item, 0)
-  equal(result, 10)
-})
+// test("reduce() when items are numbers - should return a number as result", () => {
+//   const result = reduce([1, 2, 3, 4], (sum, item) => sum + item, 0)
+//   equal(result, 10)
+// })
 
-test("reduce() when initial value is set to something other than 0", () => {
-  const result = reduce([1, 2, 3, 4], (sum, item) => sum + item, 5)
-  equal(result, 15)
-})
+// test("reduce() when initial value is set to something other than 0", () => {
+//   const result = reduce([1, 2, 3, 4], (sum, item) => sum + item, 5)
+//   equal(result, 15)
+// })
 
-test("reduce() when items are strings - should return a string as result", () => {
-  const result = reduce(["a", "b", "c", "d"], (sum, item) => sum + item, "")
-  equal(result, "abcd")
-})
+// test("reduce() when items are strings - should return a string as result", () => {
+//   const result = reduce(["a", "b", "c", "d"], (sum, item) => sum + item, "")
+//   equal(result, "abcd")
+// })
 
-test("4 - reduce() when callback function is different operation", () => {
-  const result = reduce([10, 5, 2], (sum, item) => sum - item, 0)
-  equal(result, -17)
-})
+// test("4 - reduce() when callback function is different operation", () => {
+//   const result = reduce([10, 5, 2], (sum, item) => sum - item, 0)
+//   equal(result, -17)
+// })
 
-test("reduce() when items are negative numbers - should return a negative number as result", () => {
-  const result = reduce([-1, -2, -3, -4], (sum, item) => sum + item, 0)
-  equal(result, -10)
-})
+// test("reduce() when items are negative numbers - should return a negative number as result", () => {
+//   const result = reduce([-1, -2, -3, -4], (sum, item) => sum + item, 0)
+//   equal(result, -10)
+// })
 
-test("reduce() when items are within arrays - should return a string as result", () => {
-  const result = reduce([[1], [23]], (sum, item) => sum + item, [])
-  equal(result, "123")
-})
+// test("reduce() when items are within arrays - should return a string as result", () => {
+//   const result = reduce([[1], [23]], (sum, item) => sum + item, [])
+//   equal(result, "123")
+// })

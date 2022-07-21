@@ -8,10 +8,10 @@
 //   const filteredArray = []
 
 //   for (let i = 0; i < array.length; i++) {
-//     const testFn = callback(array[i])
+//     const resultOfFn = callback(array[i])
 
-//     if (testFn === true) {
-//       filteredArray.push(testFn)
+//     if (resultOfFn === true) {
+//       filteredArray.push(array[i])
 //     }
 //   }
 //   return filteredArray
@@ -28,11 +28,15 @@
 
 //   for (let i = 0; i < array.length; i++) {
 //     answer = callback(array[i])
-//     if (!answer) return false
+//     if (!answer) {
+//       return answer
+//       break
+//     }
 //   }
 
 //   return answer
 // }
+// Look at using a Do While Loop
 
 /////////////////////////////////
 
@@ -75,12 +79,12 @@
 
 /////////////////////////////////
 
-function reduce(array, callback, initialValue) {
-  initialValue = initialValue
+// function reduce(array, callback, initialValue) {
+//   initialValue = initialValue
 
-  for (let i = 0; i < array.length; i++) {
-    initialValue = callback(initialValue, array[i])
-  }
+//   for (let i = 0; i < array.length; i++) {
+//     initialValue = callback(initialValue, array[i])
+//   }
 
-  return initialValue
-}
+//   return initialValue
+// }

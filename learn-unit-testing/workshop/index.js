@@ -11,19 +11,19 @@
 /////////////////////////////////
 
 function searchParamsToObject(string) {
-  const newObj = {}
+  const newObj = {};
 
-  const paramsArray = string.split("&")
+  const paramsArray = string.split("&");
   //console.log(paramsArray)
 
   for (const entry of paramsArray) {
-    const pairArray = entry.split("=")
-    const key = pairArray[0]
-    const value = pairArray[1]
-    newObj[key] = value
+    const pairArray = entry.split("=");
+    const key = pairArray[0];
+    const value = pairArray[1];
+    newObj[key] = value;
   }
 
-  return newObj
+  return newObj;
 }
 
 // searchParamsToObject("name=joe&email=hello@joelindie.com")
